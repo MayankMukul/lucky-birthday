@@ -6,14 +6,14 @@ function checkluckynumber(){
     console.log(dob.value+ " "+luckynumber.value);
     dobsum = dob.value.replaceAll('-','');
     //dobsum = dobsum.replaceAll('','+');
-    //console.log(dobsum);
-     
-    for(let i=0 ,sum =0; i<8;i++) {
-        
-        sum = sum+dobsum[i];
-        console.log(sum);
+    console.log(dobsum);
+    let sum =0; 
+    for(let i=0 ; i<8;i++) {
+        //dobsum[i]=dobsum[i]*1;   
+        sum = sum*1+dobsum[i]*1;
+       
     }
-    
+    console.log(sum);
 }
 
 btn.addEventListener("click",checkluckynumber);
