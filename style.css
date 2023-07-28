@@ -1,10 +1,15 @@
+
 body {
     margin:1rem;
     padding: 2rem;
-
 }
 
 button {
     display: block;
     margin: 1rem 0rem; 
+}
+
+input {
+    padding: .5rem;
+    font-size: 1rem;
 }
