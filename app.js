@@ -5,15 +5,22 @@ var message = document.querySelector("#message");
 var dobsum ;
 
 function checkluckynumber(){
-    console.log(dob.value+ " "+luckynumber.value);
+
     dobsum = dob.value.replaceAll('-','');
-    console.log(dobsum);
+    
     let sum =0; 
     for(let i=0 ; i<8;i++) {
         sum = sum+dobsum[i]*1;
     }
-    console.log(sum);
-    checklucky(sum,luckynumber.value);
+
+    if(luckynumber.value !== '' && dobsum !== ''){
+        checklucky(sum,luckynumber.value);
+    }else if (dobsum == ''){
+        message.innerHTML=`<span style= "color : red"> Please Enter Your Birth Date! </span>`;
+    } else if (luckynumber.value == '') {
+        message.innerHTML = `<span style= "color : red"> Please enter your lucky number! </span>`;
+    } 
+   
 }
 
 function checklucky(sum,number){
